@@ -44,6 +44,12 @@ public class Movies {
     private String releaseDate;
     @Column(columnDefinition = "TEXT")
     @Lob
+    private String revenue;
+    @Column(columnDefinition = "TEXT")
+    @Lob
+    private String runtime;
+    @Column(columnDefinition = "TEXT")
+    @Lob
     private String spokenLanguage;
     @Column(columnDefinition = "TEXT")
     @Lob
@@ -199,7 +205,23 @@ public class Movies {
 
     public Movies(){}
 
-    public Movies(Long id, String budget, String genres, String homePage, String originalLanguage, String originalTitle, String overview, String popularity, String productionCompanies, String productionCountries, String releaseDate, String spokenLanguage, String status, String tagline, String title, String voteAverage, String voteCount) {
+    public String getRevenue() {
+        return revenue;
+    }
+
+    public void setRevenue(String revenue) {
+        this.revenue = revenue;
+    }
+
+    public String getRuntime() {
+        return runtime;
+    }
+
+    public void setRuntime(String runtime) {
+        this.runtime = runtime;
+    }
+
+    public Movies(Long id, String budget, String genres, String homePage, String originalLanguage, String originalTitle, String overview, String popularity, String productionCompanies, String productionCountries, String releaseDate, String revenue, String runtime, String spokenLanguage, String status, String tagline, String title, String voteAverage, String voteCount) {
         this.id = id;
         this.budget = budget;
         this.genres = genres;
@@ -211,6 +233,8 @@ public class Movies {
         this.productionCompanies = productionCompanies;
         this.productionCountries = productionCountries;
         this.releaseDate = releaseDate;
+        this.revenue = revenue;
+        this.runtime = runtime;
         this.spokenLanguage = spokenLanguage;
         this.status = status;
         this.tagline = tagline;
