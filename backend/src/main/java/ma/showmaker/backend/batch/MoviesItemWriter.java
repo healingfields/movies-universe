@@ -9,7 +9,7 @@ import java.util.List;
 
 @Component
 public class MoviesItemWriter implements ItemWriter<Movies> {
-    private MoviesRepository moviesRepository;
+    private final MoviesRepository moviesRepository;
 
     public MoviesItemWriter(MoviesRepository moviesRepository) {
         this.moviesRepository = moviesRepository;
