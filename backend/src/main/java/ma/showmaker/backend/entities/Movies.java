@@ -6,7 +6,6 @@ package ma.showmaker.backend.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "MOVIES_DATA")
 public class Movies {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
